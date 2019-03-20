@@ -1,0 +1,140 @@
+digraph {
+	node [color=lightblue2 style=filled]
+	subgraph cluster_1 {
+		0 [label="Purchase order" shape=box]
+		1 [label="Service Entry Sheet" shape=box]
+			0 -> 1
+		color=white label="
+Кластер 1
+Размер: 387
+Внутрикластерное расстояние: 2.00
+Межклстерное расстояние: 6.83
+
+UaMOF
+"
+		1 [label="Service Entry Sheet" shape=box]
+		2 [label="Goods Reciept" shape=box]
+			1 -> 2
+		color=white label="
+Кластер 1
+Размер: 387
+Внутрикластерное расстояние: 2.00
+Межклстерное расстояние: 6.83
+
+UaMOF
+"
+		2 [label="Goods Reciept" shape=box]
+		3 [label="Invoice Reciept" shape=box]
+			2 -> 3
+		color=white label="
+Кластер 1
+Размер: 387
+Внутрикластерное расстояние: 2.00
+Межклстерное расстояние: 6.83
+
+UaMOF
+"
+		3 [label="Invoice Reciept" shape=box]
+		4 [label="Clearing (Invoice)" shape=box]
+			3 -> 4
+		color=white label="
+Кластер 1
+Размер: 387
+Внутрикластерное расстояние: 2.00
+Межклстерное расстояние: 6.83
+
+UaMOF
+"
+	}
+	subgraph cluster_2 {
+		5 [label="Purchase order" shape=box]
+		6 [label="RELEASED (5% delta possible)" shape=box]
+			5 -> 6
+		color=white label="
+Кластер 2
+Размер: 369
+Внутрикластерное расстояние: 1.96
+Межклстерное расстояние: 6.83
+
+UZBWMSORF
+"
+		6 [label="RELEASED (5% delta possible)" shape=box]
+		7 [label=Approved shape=box]
+			6 -> 7
+		color=white label="
+Кластер 2
+Размер: 369
+Внутрикластерное расстояние: 1.96
+Межклстерное расстояние: 6.83
+
+UZBWMSORF
+"
+		7 [label=Approved shape=box]
+		8 [label="Purchase order item updated" shape=box]
+			7 -> 8
+		color=white label="
+Кластер 2
+Размер: 369
+Внутрикластерное расстояние: 1.96
+Межклстерное расстояние: 6.83
+
+UZBWMSORF
+"
+		8 [label="Purchase order item updated" shape=box]
+		9 [label="Goods Reciept" shape=box]
+			8 -> 9
+		color=white label="
+Кластер 2
+Размер: 369
+Внутрикластерное расстояние: 1.96
+Межклстерное расстояние: 6.83
+
+UZBWMSORF
+"
+		9 [label="Goods Reciept" shape=box]
+		10 [label="Invoice Reciept item updated" shape=box]
+			9 -> 10
+		color=white label="
+Кластер 2
+Размер: 369
+Внутрикластерное расстояние: 1.96
+Межклстерное расстояние: 6.83
+
+UZBWMSORF
+"
+		10 [label="Invoice Reciept item updated" shape=box]
+		11 [label="Invoice Reciept" shape=box]
+			10 -> 11
+		color=white label="
+Кластер 2
+Размер: 369
+Внутрикластерное расстояние: 1.96
+Межклстерное расстояние: 6.83
+
+UZBWMSORF
+"
+		11 [label="Invoice Reciept" shape=box]
+		12 [label="Invoice Reciept header updated" shape=box]
+			11 -> 12
+		color=white label="
+Кластер 2
+Размер: 369
+Внутрикластерное расстояние: 1.96
+Межклстерное расстояние: 6.83
+
+UZBWMSORF
+"
+		12 [label="Invoice Reciept header updated" shape=box]
+		13 [label="Clearing (Invoice)" shape=box]
+			12 -> 13
+		color=white label="
+Кластер 2
+Размер: 369
+Внутрикластерное расстояние: 1.96
+Межклстерное расстояние: 6.83
+
+UZBWMSORF
+"
+	}
+	rankdir=LR
+}

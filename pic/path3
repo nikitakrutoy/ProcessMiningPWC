@@ -1,0 +1,16 @@
+digraph {
+	node [color=lightblue2 style=filled]
+	label=UaMOF labelloc=top
+	0 [label="Purchase order" shape=box]
+	1 [label="Service Entry Sheet" shape=box]
+		0 -> 1
+	1 [label="Service Entry Sheet" shape=box]
+	2 [label="Goods Reciept" shape=box]
+		1 -> 2
+	2 [label="Goods Reciept" shape=box]
+	3 [label="Invoice Reciept" shape=box]
+		2 -> 3
+	3 [label="Invoice Reciept" shape=box]
+	4 [label="Clearing (Invoice)" shape=box]
+		3 -> 4
+}

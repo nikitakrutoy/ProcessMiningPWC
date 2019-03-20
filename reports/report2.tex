@@ -1,0 +1,53 @@
+% !TEX root = /Users/nikitakrutoy/Projects/ProcessMiningPWC/report2.text
+\listfiles
+\documentclass[hess]{copernicus}%, manuscript]{copernicus}
+%% \usepackage commands included in the copernicus.cls:
+%\usepackage[german, english]{babel}
+%\usepackage{tabularx}
+%\usepackage{cancel}
+%\usepackage{multirow}
+%\usepackage{supertabular}
+%\usepackage{algorithmic}
+%\usepackage{algorithm}
+%\usepackage{amsthm}
+%\usepackage{float}
+%\usepackage{subfig}
+%\usepackage{rotating}
+
+
+\usepackage{todonotes}
+\usepackage[utf8]{inputenc}
+
+\begin{document}
+
+test
+
+
+%%% TWO-COLUMN TABLE
+%
+%t
+\begin{table*}[t]
+  \caption{This is a table
+% \todo[inline]{some fixme notes about this table}
+  }
+  \todo[inline]{some fixme notes about this table äöüßÄÖÜ} % <============================
+%\begin{tabular}{column = l c c c c}
+  %Somehow, the above does not work, even though the template specifies it. But the standard solution below works.
+\begin{tabular}{l | c c c c c c}
+Location  &  Average    &   Average    & Average   & Average    &  Average  & Average   \\
+
+\tophline
+xxx  &  yyy  &  yyy & yyy  & yyy & yyy & yyy   \\
+xxx &  yyy  &  yyy & yyy  &  yyy &  yyy & yyy \\
+%
+%
+% \middlehline
+%
+% \bottomhline
+\end{tabular}
+\belowtable{} % Table Footnotes
+\label{Result_table}
+\end{table*}
+
+
+\end{document}

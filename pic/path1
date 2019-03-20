@@ -1,0 +1,22 @@
+digraph {
+	node [color=lightblue2 style=filled]
+	label=UBZMROF labelloc=top
+	"Purchase order" [label="Purchase order" color=lightslateblue shape=box]
+	Approved [label=Approved color=lightblue2 shape=box]
+		"Purchase order" -> Approved
+	Approved [label=Approved color=lightblue2 shape=box]
+	"RELEASED (5% delta possible)" [label="RELEASED (5% delta possible)" color=lightblue2 shape=box]
+		Approved -> "RELEASED (5% delta possible)"
+	"RELEASED (5% delta possible)" [label="RELEASED (5% delta possible)" color=lightblue2 shape=box]
+	"Goods Reciept" [label="Goods Reciept" color=lightslateblue shape=box]
+		"RELEASED (5% delta possible)" -> "Goods Reciept"
+	"Goods Reciept" [label="Goods Reciept" color=lightslateblue shape=box]
+	"Invoice Reciept header updated" [label="Invoice Reciept header updated" color=lightblue2 shape=box]
+		"Goods Reciept" -> "Invoice Reciept header updated"
+	"Invoice Reciept header updated" [label="Invoice Reciept header updated" color=lightblue2 shape=box]
+	"Invoice Reciept" [label="Invoice Reciept" color=lightslateblue shape=box]
+		"Invoice Reciept header updated" -> "Invoice Reciept"
+	"Invoice Reciept" [label="Invoice Reciept" color=lightslateblue shape=box]
+	"Clearing (Invoice)" [label="Clearing (Invoice)" color=lightslateblue shape=box]
+		"Invoice Reciept" -> "Clearing (Invoice)"
+}

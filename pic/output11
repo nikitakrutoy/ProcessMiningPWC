@@ -1,0 +1,18 @@
+digraph {
+	node [color=lightblue2 style=filled]
+	dpi=300
+	label="UMaaMaMaMaMaMaMaOF 
+ UMaOF" labelloc=top
+	"Purchase order" [label="Purchase order" color="#D85604" shape=box]
+	"Goods Reciept" [label="Goods Reciept" color="#D85604" shape=box]
+		"Purchase order" -> "Goods Reciept"
+	"Goods Reciept" [label="Goods Reciept" color="#D85604" shape=box]
+	"Service Entry Sheet" [label="Service Entry Sheet" color="#F3BE26" shape=box]
+		"Goods Reciept" -> "Service Entry Sheet"
+	"Service Entry Sheet" [label="Service Entry Sheet" color="#F3BE26" shape=box]
+	"Invoice Reciept" [label="Invoice Reciept" color="#D85604" shape=box]
+		"Service Entry Sheet" -> "Invoice Reciept"
+	"Invoice Reciept" [label="Invoice Reciept" color="#D85604" shape=box]
+	"Clearing (Invoice)" [label="Clearing (Invoice)" color="#D85604" shape=box]
+		"Invoice Reciept" -> "Clearing (Invoice)"
+}

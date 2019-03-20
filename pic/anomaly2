@@ -1,0 +1,46 @@
+digraph {
+	node [color=lightblue2 style=filled]
+	dpi=300
+	"Purchase order" [label="Purchase order" color="#F3BE26" shape=box]
+	"RELEASED (5% delta possible)" [label="RELEASED (5% delta possible)" color="#F3BE26" shape=box]
+		"Purchase order" -> "RELEASED (5% delta possible)"
+	"RELEASED (5% delta possible)" [label="RELEASED (5% delta possible)" color="#F3BE26" shape=box]
+	Approved [label=Approved color="#F3BE26" shape=box]
+		"RELEASED (5% delta possible)" -> Approved
+	Approved [label=Approved color="#F3BE26" shape=box]
+	"Goods Reciept" [label="Goods Reciept" color="#F3BE26" shape=box]
+		Approved -> "Goods Reciept"
+	"Goods Reciept" [label="Goods Reciept" color="#F3BE26" shape=box]
+	"Invoice Reciept item updated" [label="Invoice Reciept item updated" color="#F3BE26" shape=box]
+		"Goods Reciept" -> "Invoice Reciept item updated"
+	"Invoice Reciept item updated" [label="Invoice Reciept item updated" color="#F3BE26" shape=box]
+	"Invoice Reciept item updated" [label="Invoice Reciept item updated" color="#F3BE26" shape=box]
+		"Invoice Reciept item updated" -> "Invoice Reciept item updated"
+	"Invoice Reciept item updated" [label="Invoice Reciept item updated" color="#F3BE26" shape=box]
+	"Invoice Reciept header updated" [label="Invoice Reciept header updated" color="#F3BE26" shape=box]
+		"Invoice Reciept item updated" -> "Invoice Reciept header updated"
+	"Invoice Reciept header updated" [label="Invoice Reciept header updated" color="#F3BE26" shape=box]
+	"Invoice Reciept (Logistics invoice) blocked" [label="Invoice Reciept (Logistics invoice) blocked" color="#F3BE26" shape=box]
+		"Invoice Reciept header updated" -> "Invoice Reciept (Logistics invoice) blocked"
+	"Invoice Reciept (Logistics invoice) blocked" [label="Invoice Reciept (Logistics invoice) blocked" color="#F3BE26" shape=box]
+	"Invoice Reciept" [label="Invoice Reciept" color="#F3BE26" shape=box]
+		"Invoice Reciept (Logistics invoice) blocked" -> "Invoice Reciept"
+	"Invoice Reciept" [label="Invoice Reciept" color="#F3BE26" shape=box]
+	"Purchase order item updated" [label="Purchase order item updated" color="#F3BE26" shape=box]
+		"Invoice Reciept" -> "Purchase order item updated"
+	"Purchase order item updated" [label="Purchase order item updated" color="#F3BE26" shape=box]
+	"Purchase order item updated" [label="Purchase order item updated" color="#F3BE26" shape=box]
+		"Purchase order item updated" -> "Purchase order item updated"
+	"Purchase order item updated" [label="Purchase order item updated" color="#F3BE26" shape=box]
+	"Clearing (Invoice)" [label="Clearing (Invoice)" color="#F3BE26" shape=box]
+		"Purchase order item updated" -> "Clearing (Invoice)"
+	"Clearing (Invoice)" [label="Clearing (Invoice)" color="#F3BE26" shape=box]
+	"Purchase order item updated" [label="Purchase order item updated" color="#F3BE26" shape=box]
+		"Clearing (Invoice)" -> "Purchase order item updated"
+	"Purchase order item updated" [label="Purchase order item updated" color="#F3BE26" shape=box]
+	"Purchase order item updated" [label="Purchase order item updated" color="#F3BE26" shape=box]
+		"Purchase order item updated" -> "Purchase order item updated"
+	"Purchase order item updated" [label="Purchase order item updated" color="#F3BE26" shape=box]
+	"Purchase order item updated" [label="Purchase order item updated" color="#F3BE26" shape=box]
+		"Purchase order item updated" -> "Purchase order item updated"
+}

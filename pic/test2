@@ -1,0 +1,89 @@
+digraph {
+	rankdir=LR
+	start [color=lightslateblue shape=circle style=filled]
+	end [color=lightslateblue shape=circle style=filled]
+		"RELEASED (5% delta possible)" -> p0
+	"RELEASED (5% delta possible)" [label="RELEASED (5% delta possible)" color=lightblue2 shape=box style=filled]
+	p0 [color=lightslateblue shape=circle style=filled]
+		"Purchase order" -> p0
+	"Purchase order" [label="Purchase order" color=lightblue2 shape=box style=filled]
+	p0 [color=lightslateblue shape=circle style=filled]
+		p0 -> "Goods Reciept"
+	"Goods Reciept" [label="Goods Reciept" color=lightblue2 shape=box style=filled]
+		"Goods Reciept" -> p1
+	"Goods Reciept" [label="Goods Reciept" color=lightblue2 shape=box style=filled]
+	p1 [color=lightslateblue shape=circle style=filled]
+		p1 -> "Invoice Reciept (Logistics invoice) released"
+	"Invoice Reciept (Logistics invoice) released" [label="Invoice Reciept (Logistics invoice) released" color=lightblue2 shape=box style=filled]
+		Approved -> p2
+	Approved [label=Approved color=lightblue2 shape=box style=filled]
+	p2 [color=lightslateblue shape=circle style=filled]
+		p2 -> "Goods Reciept"
+	"Goods Reciept" [label="Goods Reciept" color=lightblue2 shape=box style=filled]
+		"Invoice Reciept (Logistics invoice) released" -> p3
+	"Invoice Reciept (Logistics invoice) released" [label="Invoice Reciept (Logistics invoice) released" color=lightblue2 shape=box style=filled]
+	p3 [color=lightslateblue shape=circle style=filled]
+		p3 -> "Invoice Reciept item updated"
+	"Invoice Reciept item updated" [label="Invoice Reciept item updated" color=lightblue2 shape=box style=filled]
+		"RELEASED (5% delta possible)" -> p4
+	"RELEASED (5% delta possible)" [label="RELEASED (5% delta possible)" color=lightblue2 shape=box style=filled]
+	p4 [color=lightslateblue shape=circle style=filled]
+		RELEASED -> p4
+	RELEASED [label=RELEASED color=lightblue2 shape=box style=filled]
+	p4 [color=lightslateblue shape=circle style=filled]
+		p4 -> "Goods Reciept"
+	"Goods Reciept" [label="Goods Reciept" color=lightblue2 shape=box style=filled]
+		Approved -> p5
+	Approved [label=Approved color=lightblue2 shape=box style=filled]
+	p5 [color=lightslateblue shape=circle style=filled]
+		p5 -> "RELEASED (5% delta possible)"
+	"RELEASED (5% delta possible)" [label="RELEASED (5% delta possible)" color=lightblue2 shape=box style=filled]
+		"Purchase order" -> p6
+	"Purchase order" [label="Purchase order" color=lightblue2 shape=box style=filled]
+	p6 [color=lightslateblue shape=circle style=filled]
+		p6 -> RELEASED
+	RELEASED [label=RELEASED color=lightblue2 shape=box style=filled]
+		p6 -> "Service Entry Sheet"
+	"Service Entry Sheet" [label="Service Entry Sheet" color=lightblue2 shape=box style=filled]
+		p6 -> "Delivery (Stock Transfer)"
+	"Delivery (Stock Transfer)" [label="Delivery (Stock Transfer)" color=lightblue2 shape=box style=filled]
+		"Goods Issue for Stock Transfer" -> p7
+	"Goods Issue for Stock Transfer" [label="Goods Issue for Stock Transfer" color=lightblue2 shape=box style=filled]
+	p7 [color=lightslateblue shape=circle style=filled]
+		"Service Entry Sheet" -> p7
+	"Service Entry Sheet" [label="Service Entry Sheet" color=lightblue2 shape=box style=filled]
+	p7 [color=lightslateblue shape=circle style=filled]
+		p7 -> "Invoice Reciept"
+	"Invoice Reciept" [label="Invoice Reciept" color=lightblue2 shape=box style=filled]
+		"Purchase order" -> p8
+	"Purchase order" [label="Purchase order" color=lightblue2 shape=box style=filled]
+	p8 [color=lightslateblue shape=circle style=filled]
+		p8 -> "Goods Reciept"
+	"Goods Reciept" [label="Goods Reciept" color=lightblue2 shape=box style=filled]
+		p8 -> "Delivery (Stock Transfer)"
+	"Delivery (Stock Transfer)" [label="Delivery (Stock Transfer)" color=lightblue2 shape=box style=filled]
+		"Delivery (Stock Transfer)" -> p9
+	"Delivery (Stock Transfer)" [label="Delivery (Stock Transfer)" color=lightblue2 shape=box style=filled]
+	p9 [color=lightslateblue shape=circle style=filled]
+		p9 -> "Goods Issue for Stock Transfer"
+	"Goods Issue for Stock Transfer" [label="Goods Issue for Stock Transfer" color=lightblue2 shape=box style=filled]
+		"Purchase order" -> p10
+	"Purchase order" [label="Purchase order" color=lightblue2 shape=box style=filled]
+	p10 [color=lightslateblue shape=circle style=filled]
+		p10 -> Approved
+	Approved [label=Approved color=lightblue2 shape=box style=filled]
+		p10 -> "Service Entry Sheet"
+	"Service Entry Sheet" [label="Service Entry Sheet" color=lightblue2 shape=box style=filled]
+		p10 -> "Delivery (Stock Transfer)"
+	"Delivery (Stock Transfer)" [label="Delivery (Stock Transfer)" color=lightblue2 shape=box style=filled]
+		"Invoice Reciept" -> p11
+	"Invoice Reciept" [label="Invoice Reciept" color=lightblue2 shape=box style=filled]
+	p11 [color=lightslateblue shape=circle style=filled]
+		"Invoice Reciept item updated" -> p11
+	"Invoice Reciept item updated" [label="Invoice Reciept item updated" color=lightblue2 shape=box style=filled]
+	p11 [color=lightslateblue shape=circle style=filled]
+		p11 -> "Clearing (Invoice)"
+	"Clearing (Invoice)" [label="Clearing (Invoice)" color=lightblue2 shape=box style=filled]
+		start -> "Purchase order"
+		"Clearing (Invoice)" -> end
+}

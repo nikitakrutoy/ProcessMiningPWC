@@ -1,0 +1,33 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname=helvetica] ;
+edge [fontname=helvetica] ;
+0 [label="Material <= 0.202\ngini = 0.77\nsamples = 1526\nvalue = [484, 365, 230, 58, 59, 330]\nclass = cluster0", fillcolor="#e581391a"] ;
+1 [label="Vendor <= 0.073\ngini = 0.722\nsamples = 1042\nvalue = [0, 365, 230, 58, 59, 330]\nclass = cluster1", fillcolor="#9de5390d"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="Duration <= 2636804.0\ngini = 0.619\nsamples = 712\nvalue = [0, 365, 230, 58, 59, 0]\nclass = cluster1", fillcolor="#9de53947"] ;
+1 -> 2 ;
+3 [label="Quantity <= 12125.0\ngini = 0.196\nsamples = 409\nvalue = [0, 365, 0, 11, 33, 0]\nclass = cluster1", fillcolor="#9de539e1"] ;
+2 -> 3 ;
+4 [label="gini = 0.0\nsamples = 364\nvalue = [0, 364, 0, 0, 0, 0]\nclass = cluster1", fillcolor="#9de539ff"] ;
+3 -> 4 ;
+5 [label="Quantity <= 37665.0\ngini = 0.402\nsamples = 45\nvalue = [0, 1, 0, 11, 33, 0]\nclass = cluster4", fillcolor="#8139e5a5"] ;
+3 -> 5 ;
+6 [label="gini = 0.057\nsamples = 34\nvalue = [0, 1, 0, 0, 33, 0]\nclass = cluster4", fillcolor="#8139e5f7"] ;
+5 -> 6 ;
+7 [label="gini = 0.0\nsamples = 11\nvalue = [0, 0, 0, 11, 0, 0]\nclass = cluster3", fillcolor="#399de5ff"] ;
+5 -> 7 ;
+8 [label="Amount <= 31462.262\ngini = 0.392\nsamples = 303\nvalue = [0, 0, 230, 47, 26, 0]\nclass = cluster2", fillcolor="#39e581b6"] ;
+2 -> 8 ;
+9 [label="gini = 0.0\nsamples = 228\nvalue = [0, 0, 228, 0, 0, 0]\nclass = cluster2", fillcolor="#39e581ff"] ;
+8 -> 9 ;
+10 [label="Quantity <= 44730.0\ngini = 0.486\nsamples = 75\nvalue = [0, 0, 2, 47, 26, 0]\nclass = cluster3", fillcolor="#399de56d"] ;
+8 -> 10 ;
+11 [label="gini = 0.133\nsamples = 28\nvalue = [0, 0, 2, 0, 26, 0]\nclass = cluster4", fillcolor="#8139e5eb"] ;
+10 -> 11 ;
+12 [label="gini = 0.0\nsamples = 47\nvalue = [0, 0, 0, 47, 0, 0]\nclass = cluster3", fillcolor="#399de5ff"] ;
+10 -> 12 ;
+13 [label="gini = 0.0\nsamples = 330\nvalue = [0, 0, 0, 0, 0, 330]\nclass = cluster5", fillcolor="#e5399dff"] ;
+1 -> 13 ;
+14 [label="gini = 0.0\nsamples = 484\nvalue = [484, 0, 0, 0, 0, 0]\nclass = cluster0", fillcolor="#e58139ff"] ;
+0 -> 14 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+}

@@ -1,0 +1,32 @@
+digraph {
+	rankdir=LR
+	start
+	end
+		"Purchase requisition item updated" -> "(('Purchase requisition item updated',), ('Purchase requisition',))"
+	"Purchase requisition item updated" [shape=box]
+	"(('Purchase requisition item updated',), ('Purchase requisition',))" [shape=circle]
+		"(('Purchase requisition item updated',), ('Purchase requisition',))" -> "Purchase requisition"
+	"Purchase requisition" [shape=box]
+		"Invoice Reciept" -> "(('Invoice Reciept',), ('Clearing (Invoice)',))"
+	"Invoice Reciept" [shape=box]
+	"(('Invoice Reciept',), ('Clearing (Invoice)',))" [shape=circle]
+		"(('Invoice Reciept',), ('Clearing (Invoice)',))" -> "Clearing (Invoice)"
+	"Clearing (Invoice)" [shape=box]
+		"Purchase order" -> "(('Purchase order',), ('Approved',))"
+	"Purchase order" [shape=box]
+	"(('Purchase order',), ('Approved',))" [shape=circle]
+		"(('Purchase order',), ('Approved',))" -> Approved
+	Approved [shape=box]
+		"Purchase order" -> "(('Purchase order',), ('RELEASED (5% delta possible)',))"
+	"Purchase order" [shape=box]
+	"(('Purchase order',), ('RELEASED (5% delta possible)',))" [shape=circle]
+		"(('Purchase order',), ('RELEASED (5% delta possible)',))" -> "RELEASED (5% delta possible)"
+	"RELEASED (5% delta possible)" [shape=box]
+		start -> "Invoice Reciept"
+		start -> "Purchase requisition item updated"
+		start -> "Purchase order"
+		"RELEASED (5% delta possible)" -> end
+		"Clearing (Invoice)" -> end
+		"Purchase requisition" -> end
+		Approved -> end
+}

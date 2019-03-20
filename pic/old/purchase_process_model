@@ -1,0 +1,81 @@
+digraph {
+	rankdir=LR
+	start
+	end
+		"Invoice Reciept" -> "(('Invoice Reciept',), ('Clearing (Invoice)',))"
+	"Invoice Reciept" [shape=box]
+	"(('Invoice Reciept',), ('Clearing (Invoice)',))" [shape=circle]
+		"(('Invoice Reciept',), ('Clearing (Invoice)',))" -> "Clearing (Invoice)"
+	"Clearing (Invoice)" [shape=box]
+		"Service Entry Sheet" -> "(('Service Entry Sheet', 'Invoice Reciept item updated'), ('Invoice Reciept',))"
+	"Service Entry Sheet" [shape=box]
+	"(('Service Entry Sheet', 'Invoice Reciept item updated'), ('Invoice Reciept',))" [shape=circle]
+		"Invoice Reciept item updated" -> "(('Service Entry Sheet', 'Invoice Reciept item updated'), ('Invoice Reciept',))"
+	"Invoice Reciept item updated" [shape=box]
+	"(('Service Entry Sheet', 'Invoice Reciept item updated'), ('Invoice Reciept',))" [shape=circle]
+		"(('Service Entry Sheet', 'Invoice Reciept item updated'), ('Invoice Reciept',))" -> "Invoice Reciept"
+	"Invoice Reciept" [shape=box]
+		"Purchase order" -> "(('Purchase order', 'Purchase order item updated'), ('Goods Reciept',))"
+	"Purchase order" [shape=box]
+	"(('Purchase order', 'Purchase order item updated'), ('Goods Reciept',))" [shape=circle]
+		"Purchase order item updated" -> "(('Purchase order', 'Purchase order item updated'), ('Goods Reciept',))"
+	"Purchase order item updated" [shape=box]
+	"(('Purchase order', 'Purchase order item updated'), ('Goods Reciept',))" [shape=circle]
+		"(('Purchase order', 'Purchase order item updated'), ('Goods Reciept',))" -> "Goods Reciept"
+	"Goods Reciept" [shape=box]
+		"Invoice Reciept header updated" -> "(('Invoice Reciept header updated',), ('Clearing (Invoice)', 'Invoice Reciept item updated'))"
+	"Invoice Reciept header updated" [shape=box]
+	"(('Invoice Reciept header updated',), ('Clearing (Invoice)', 'Invoice Reciept item updated'))" [shape=circle]
+		"(('Invoice Reciept header updated',), ('Clearing (Invoice)', 'Invoice Reciept item updated'))" -> "Clearing (Invoice)"
+	"Clearing (Invoice)" [shape=box]
+		"(('Invoice Reciept header updated',), ('Clearing (Invoice)', 'Invoice Reciept item updated'))" -> "Invoice Reciept item updated"
+	"Invoice Reciept item updated" [shape=box]
+		"Purchase order" -> "(('Purchase order',), ('Goods Reciept', 'Approved'))"
+	"Purchase order" [shape=box]
+	"(('Purchase order',), ('Goods Reciept', 'Approved'))" [shape=circle]
+		"(('Purchase order',), ('Goods Reciept', 'Approved'))" -> "Goods Reciept"
+	"Goods Reciept" [shape=box]
+		"(('Purchase order',), ('Goods Reciept', 'Approved'))" -> Approved
+	Approved [shape=box]
+		Approved -> "(('Approved',), ('RELEASED (10% delta possible)', 'RELEASED (5% delta possible)'))"
+	Approved [shape=box]
+	"(('Approved',), ('RELEASED (10% delta possible)', 'RELEASED (5% delta possible)'))" [shape=circle]
+		"(('Approved',), ('RELEASED (10% delta possible)', 'RELEASED (5% delta possible)'))" -> "RELEASED (10% delta possible)"
+	"RELEASED (10% delta possible)" [shape=box]
+		"(('Approved',), ('RELEASED (10% delta possible)', 'RELEASED (5% delta possible)'))" -> "RELEASED (5% delta possible)"
+	"RELEASED (5% delta possible)" [shape=box]
+		"Invoice Reciept" -> "(('Invoice Reciept',), ('Invoice Reciept header updated',))"
+	"Invoice Reciept" [shape=box]
+	"(('Invoice Reciept',), ('Invoice Reciept header updated',))" [shape=circle]
+		"(('Invoice Reciept',), ('Invoice Reciept header updated',))" -> "Invoice Reciept header updated"
+	"Invoice Reciept header updated" [shape=box]
+		"Goods Reciept" -> "(('Goods Reciept', 'Invoice Reciept item updated'), ('Invoice Reciept',))"
+	"Goods Reciept" [shape=box]
+	"(('Goods Reciept', 'Invoice Reciept item updated'), ('Invoice Reciept',))" [shape=circle]
+		"Invoice Reciept item updated" -> "(('Goods Reciept', 'Invoice Reciept item updated'), ('Invoice Reciept',))"
+	"Invoice Reciept item updated" [shape=box]
+	"(('Goods Reciept', 'Invoice Reciept item updated'), ('Invoice Reciept',))" [shape=circle]
+		"(('Goods Reciept', 'Invoice Reciept item updated'), ('Invoice Reciept',))" -> "Invoice Reciept"
+	"Invoice Reciept" [shape=box]
+		"Goods Reciept" -> "(('Goods Reciept',), ('Service Entry Sheet',))"
+	"Goods Reciept" [shape=box]
+	"(('Goods Reciept',), ('Service Entry Sheet',))" [shape=circle]
+		"(('Goods Reciept',), ('Service Entry Sheet',))" -> "Service Entry Sheet"
+	"Service Entry Sheet" [shape=box]
+		"Purchase requisition item updated" -> "(('Purchase requisition item updated',), ('Purchase requisition',))"
+	"Purchase requisition item updated" [shape=box]
+	"(('Purchase requisition item updated',), ('Purchase requisition',))" [shape=circle]
+		"(('Purchase requisition item updated',), ('Purchase requisition',))" -> "Purchase requisition"
+	"Purchase requisition" [shape=box]
+		"RELEASED (10% delta possible)" -> "(('RELEASED (10% delta possible)',), ('Purchase order item updated',))"
+	"RELEASED (10% delta possible)" [shape=box]
+	"(('RELEASED (10% delta possible)',), ('Purchase order item updated',))" [shape=circle]
+		"(('RELEASED (10% delta possible)',), ('Purchase order item updated',))" -> "Purchase order item updated"
+	"Purchase order item updated" [shape=box]
+		start -> "Purchase order"
+		start -> "Purchase requisition item updated"
+		"RELEASED (5% delta possible)" -> end
+		"Purchase requisition" -> end
+		"Clearing (Invoice)" -> end
+		"Goods Reciept" -> end
+}

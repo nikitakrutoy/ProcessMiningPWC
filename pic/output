@@ -1,0 +1,54 @@
+digraph {
+	subgraph cluster_1 {
+		node [fillcolor=darkolivegreen2]
+		0 [label="Purchase order" shape=box]
+		1 [label="Invoice Reciept" shape=box]
+			0 -> 1
+		1 [label="Invoice Reciept" shape=box]
+		2 [label="Goods Reciept" shape=box]
+			1 -> 2
+		2 [label="Goods Reciept" shape=box]
+		3 [label="Service Entry Sheet" shape=box]
+			2 -> 3
+		3 [label="Service Entry Sheet" shape=box]
+		4 [label="Clearing (Invoice)" shape=box]
+			3 -> 4
+		color=white label="
+        Кластер 1
+        Размер: 259
+        Внутрикластерное расстояние: 2.02
+        "
+	}
+	subgraph cluster_2 {
+		5 [label="Purchase order" fillcolor=darkolivegreen2 shape=box]
+		6 [label=Approved fillcolor=indianred1 shape=box]
+			5 -> 6
+		6 [label=Approved fillcolor=indianred1 shape=box]
+		7 [label="RELEASED (5% delta possible)" fillcolor=indianred1 shape=box]
+			6 -> 7
+		7 [label="RELEASED (5% delta possible)" fillcolor=indianred1 shape=box]
+		8 [label="Invoice Reciept" fillcolor=darkolivegreen2 shape=box]
+			7 -> 8
+		8 [label="Invoice Reciept" fillcolor=darkolivegreen2 shape=box]
+		9 [label="Purchase order item updated" fillcolor=indianred1 shape=box]
+			8 -> 9
+		9 [label="Purchase order item updated" fillcolor=indianred1 shape=box]
+		10 [label="Invoice Reciept header updated" fillcolor=indianred1 shape=box]
+			9 -> 10
+		10 [label="Invoice Reciept header updated" fillcolor=indianred1 shape=box]
+		11 [label="Invoice Reciept item updated" fillcolor=indianred1 shape=box]
+			10 -> 11
+		11 [label="Invoice Reciept item updated" fillcolor=indianred1 shape=box]
+		12 [label="Goods Reciept" fillcolor=darkolivegreen2 shape=box]
+			11 -> 12
+		12 [label="Goods Reciept" fillcolor=darkolivegreen2 shape=box]
+		13 [label="Clearing (Invoice)" fillcolor=darkolivegreen2 shape=box]
+			12 -> 13
+		color=white label="
+        Кластер 2
+        Размер: 231
+        Внутрикластерное расстояние: 1.82
+        "
+	}
+	label="Межкластрное расстояние: 6.83" rankdir=LR
+}

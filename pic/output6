@@ -1,0 +1,56 @@
+digraph {
+	node [color=lightblue2 style=filled]
+	label="UMaaMaMaMaMaMaMaOF
+UaMOF" labelloc=top
+	"Purchase order" [label="Purchase order" color=orangered shape=box]
+	"Goods Reciept" [label="Goods Reciept" color=orangered shape=box]
+		"Purchase order" -> "Goods Reciept"
+	"Goods Reciept" [label="Goods Reciept" color=orangered shape=box]
+	"Service Entry Sheet" [label="Service Entry Sheet" color=sandybrown shape=box]
+		"Goods Reciept" -> "Service Entry Sheet"
+	"Service Entry Sheet" [label="Service Entry Sheet" color=sandybrown shape=box]
+	"Service Entry Sheet" [label="Service Entry Sheet" color=sandybrown shape=box]
+		"Service Entry Sheet" -> "Service Entry Sheet"
+	"Service Entry Sheet" [label="Service Entry Sheet" color=sandybrown shape=box]
+	"Goods Reciept" [label="Goods Reciept" color=orangered shape=box]
+		"Service Entry Sheet" -> "Goods Reciept"
+	"Goods Reciept" [label="Goods Reciept" color=orangered shape=box]
+	"Service Entry Sheet" [label="Service Entry Sheet" color=sandybrown shape=box]
+		"Goods Reciept" -> "Service Entry Sheet"
+	"Service Entry Sheet" [label="Service Entry Sheet" color=sandybrown shape=box]
+	"Goods Reciept" [label="Goods Reciept" color=orangered shape=box]
+		"Service Entry Sheet" -> "Goods Reciept"
+	"Goods Reciept" [label="Goods Reciept" color=orangered shape=box]
+	"Service Entry Sheet" [label="Service Entry Sheet" color=sandybrown shape=box]
+		"Goods Reciept" -> "Service Entry Sheet"
+	"Service Entry Sheet" [label="Service Entry Sheet" color=sandybrown shape=box]
+	"Goods Reciept" [label="Goods Reciept" color=orangered shape=box]
+		"Service Entry Sheet" -> "Goods Reciept"
+	"Goods Reciept" [label="Goods Reciept" color=orangered shape=box]
+	"Service Entry Sheet" [label="Service Entry Sheet" color=sandybrown shape=box]
+		"Goods Reciept" -> "Service Entry Sheet"
+	"Service Entry Sheet" [label="Service Entry Sheet" color=sandybrown shape=box]
+	"Goods Reciept" [label="Goods Reciept" color=orangered shape=box]
+		"Service Entry Sheet" -> "Goods Reciept"
+	"Goods Reciept" [label="Goods Reciept" color=orangered shape=box]
+	"Service Entry Sheet" [label="Service Entry Sheet" color=sandybrown shape=box]
+		"Goods Reciept" -> "Service Entry Sheet"
+	"Service Entry Sheet" [label="Service Entry Sheet" color=sandybrown shape=box]
+	"Goods Reciept" [label="Goods Reciept" color=orangered shape=box]
+		"Service Entry Sheet" -> "Goods Reciept"
+	"Goods Reciept" [label="Goods Reciept" color=orangered shape=box]
+	"Service Entry Sheet" [label="Service Entry Sheet" color=sandybrown shape=box]
+		"Goods Reciept" -> "Service Entry Sheet"
+	"Service Entry Sheet" [label="Service Entry Sheet" color=sandybrown shape=box]
+	"Goods Reciept" [label="Goods Reciept" color=orangered shape=box]
+		"Service Entry Sheet" -> "Goods Reciept"
+	"Goods Reciept" [label="Goods Reciept" color=orangered shape=box]
+	"Service Entry Sheet" [label="Service Entry Sheet" color=sandybrown shape=box]
+		"Goods Reciept" -> "Service Entry Sheet"
+	"Service Entry Sheet" [label="Service Entry Sheet" color=sandybrown shape=box]
+	"Invoice Reciept" [label="Invoice Reciept" color=orangered shape=box]
+		"Service Entry Sheet" -> "Invoice Reciept"
+	"Invoice Reciept" [label="Invoice Reciept" color=orangered shape=box]
+	"Clearing (Invoice)" [label="Clearing (Invoice)" color=orangered shape=box]
+		"Invoice Reciept" -> "Clearing (Invoice)"
+}

@@ -1,0 +1,285 @@
+digraph {
+	node [color=lightblue2 style=filled]
+	subgraph cluster_1 {
+		0 [label="Goods Reciept" shape=box]
+		1 [label="Service Entry Sheet" shape=box]
+			0 -> 1
+		color=white label="
+Кластер 1
+Размер: 366
+Внутрикластерное расстояние: 1.61
+Межклстерное расстояние: 6.84
+
+MaUOF
+"
+		1 [label="Service Entry Sheet" shape=box]
+		2 [label="Purchase order" shape=box]
+			1 -> 2
+		color=white label="
+Кластер 1
+Размер: 366
+Внутрикластерное расстояние: 1.61
+Межклстерное расстояние: 6.84
+
+MaUOF
+"
+		2 [label="Purchase order" shape=box]
+		3 [label="Invoice Reciept" shape=box]
+			2 -> 3
+		color=white label="
+Кластер 1
+Размер: 366
+Внутрикластерное расстояние: 1.61
+Межклстерное расстояние: 6.84
+
+MaUOF
+"
+		3 [label="Invoice Reciept" shape=box]
+		4 [label="Clearing (Invoice)" shape=box]
+			3 -> 4
+		color=white label="
+Кластер 1
+Размер: 366
+Внутрикластерное расстояние: 1.61
+Межклстерное расстояние: 6.84
+
+MaUOF
+"
+	}
+	subgraph cluster_2 {
+		5 [label="Purchase order" shape=box]
+		6 [label=Approved shape=box]
+			5 -> 6
+		color=white label="
+Кластер 2
+Размер: 182
+Внутрикластерное расстояние: 1.94
+Межклстерное расстояние: 6.56
+
+UBYCDWYBMORSOF
+"
+		6 [label=Approved shape=box]
+		7 [label="RELEASED (10% delta possible)" shape=box]
+			6 -> 7
+		color=white label="
+Кластер 2
+Размер: 182
+Внутрикластерное расстояние: 1.94
+Межклстерное расстояние: 6.56
+
+UBYCDWYBMORSOF
+"
+		7 [label="RELEASED (10% delta possible)" shape=box]
+		8 [label=BLOCKED shape=box]
+			7 -> 8
+		color=white label="
+Кластер 2
+Размер: 182
+Внутрикластерное расстояние: 1.94
+Межклстерное расстояние: 6.56
+
+UBYCDWYBMORSOF
+"
+		8 [label=BLOCKED shape=box]
+		9 [label=Blocked shape=box]
+			8 -> 9
+		color=white label="
+Кластер 2
+Размер: 182
+Внутрикластерное расстояние: 1.94
+Межклстерное расстояние: 6.56
+
+UBYCDWYBMORSOF
+"
+		9 [label=Blocked shape=box]
+		10 [label="Purchase order item updated" shape=box]
+			9 -> 10
+		color=white label="
+Кластер 2
+Размер: 182
+Внутрикластерное расстояние: 1.94
+Межклстерное расстояние: 6.56
+
+UBYCDWYBMORSOF
+"
+		10 [label="Purchase order item updated" shape=box]
+		11 [label="RELEASED (10% delta possible)" shape=box]
+			10 -> 11
+		color=white label="
+Кластер 2
+Размер: 182
+Внутрикластерное расстояние: 1.94
+Межклстерное расстояние: 6.56
+
+UBYCDWYBMORSOF
+"
+		11 [label="RELEASED (10% delta possible)" shape=box]
+		12 [label=Approved shape=box]
+			11 -> 12
+		color=white label="
+Кластер 2
+Размер: 182
+Внутрикластерное расстояние: 1.94
+Межклстерное расстояние: 6.56
+
+UBYCDWYBMORSOF
+"
+		12 [label=Approved shape=box]
+		13 [label="Goods Reciept" shape=box]
+			12 -> 13
+		color=white label="
+Кластер 2
+Размер: 182
+Внутрикластерное расстояние: 1.94
+Межклстерное расстояние: 6.56
+
+UBYCDWYBMORSOF
+"
+		13 [label="Goods Reciept" shape=box]
+		14 [label="Invoice Reciept" shape=box]
+			13 -> 14
+		color=white label="
+Кластер 2
+Размер: 182
+Внутрикластерное расстояние: 1.94
+Межклстерное расстояние: 6.56
+
+UBYCDWYBMORSOF
+"
+		14 [label="Invoice Reciept" shape=box]
+		15 [label="Invoice Reciept header updated" shape=box]
+			14 -> 15
+		color=white label="
+Кластер 2
+Размер: 182
+Внутрикластерное расстояние: 1.94
+Межклстерное расстояние: 6.56
+
+UBYCDWYBMORSOF
+"
+		15 [label="Invoice Reciept header updated" shape=box]
+		16 [label="Invoice Reciept item updated" shape=box]
+			15 -> 16
+		color=white label="
+Кластер 2
+Размер: 182
+Внутрикластерное расстояние: 1.94
+Межклстерное расстояние: 6.56
+
+UBYCDWYBMORSOF
+"
+		16 [label="Invoice Reciept item updated" shape=box]
+		17 [label="Invoice Reciept" shape=box]
+			16 -> 17
+		color=white label="
+Кластер 2
+Размер: 182
+Внутрикластерное расстояние: 1.94
+Межклстерное расстояние: 6.56
+
+UBYCDWYBMORSOF
+"
+		17 [label="Invoice Reciept" shape=box]
+		18 [label="Clearing (Invoice)" shape=box]
+			17 -> 18
+		color=white label="
+Кластер 2
+Размер: 182
+Внутрикластерное расстояние: 1.94
+Межклстерное расстояние: 6.56
+
+UBYCDWYBMORSOF
+"
+	}
+	subgraph cluster_3 {
+		19 [label="Purchase order" shape=box]
+		20 [label="RELEASED (5% delta possible)" shape=box]
+			19 -> 20
+		color=white label="
+Кластер 3
+Размер: 208
+Внутрикластерное расстояние: 1.08
+Межклстерное расстояние: 5.58
+
+UZBWMSORF
+"
+		20 [label="RELEASED (5% delta possible)" shape=box]
+		21 [label=Approved shape=box]
+			20 -> 21
+		color=white label="
+Кластер 3
+Размер: 208
+Внутрикластерное расстояние: 1.08
+Межклстерное расстояние: 5.58
+
+UZBWMSORF
+"
+		21 [label=Approved shape=box]
+		22 [label="Purchase order item updated" shape=box]
+			21 -> 22
+		color=white label="
+Кластер 3
+Размер: 208
+Внутрикластерное расстояние: 1.08
+Межклстерное расстояние: 5.58
+
+UZBWMSORF
+"
+		22 [label="Purchase order item updated" shape=box]
+		23 [label="Goods Reciept" shape=box]
+			22 -> 23
+		color=white label="
+Кластер 3
+Размер: 208
+Внутрикластерное расстояние: 1.08
+Межклстерное расстояние: 5.58
+
+UZBWMSORF
+"
+		23 [label="Goods Reciept" shape=box]
+		24 [label="Invoice Reciept item updated" shape=box]
+			23 -> 24
+		color=white label="
+Кластер 3
+Размер: 208
+Внутрикластерное расстояние: 1.08
+Межклстерное расстояние: 5.58
+
+UZBWMSORF
+"
+		24 [label="Invoice Reciept item updated" shape=box]
+		25 [label="Invoice Reciept" shape=box]
+			24 -> 25
+		color=white label="
+Кластер 3
+Размер: 208
+Внутрикластерное расстояние: 1.08
+Межклстерное расстояние: 5.58
+
+UZBWMSORF
+"
+		25 [label="Invoice Reciept" shape=box]
+		26 [label="Invoice Reciept header updated" shape=box]
+			25 -> 26
+		color=white label="
+Кластер 3
+Размер: 208
+Внутрикластерное расстояние: 1.08
+Межклстерное расстояние: 5.58
+
+UZBWMSORF
+"
+		26 [label="Invoice Reciept header updated" shape=box]
+		27 [label="Clearing (Invoice)" shape=box]
+			26 -> 27
+		color=white label="
+Кластер 3
+Размер: 208
+Внутрикластерное расстояние: 1.08
+Межклстерное расстояние: 5.58
+
+UZBWMSORF
+"
+	}
+	rankdir=same
+}
